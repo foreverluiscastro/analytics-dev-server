@@ -1,9 +1,5 @@
 // Import database entry models
-const Login = require("./entry-models/Login");
-const SignUp = require("./entry-models/SignUp");
-const Events = require("./entry-models/Events");
-const Services = require("./entry-models/Services");
-const Rides = require("./entry-models/Rides");
+const { Login, SignUp, Events, Services, Rides } = require('../models/entry-models');
 
 module.exports = {
   createLoginEntry: async (req, res) => {

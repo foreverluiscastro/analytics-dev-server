@@ -1,9 +1,5 @@
 // Import dependencies
-const Login = require("../models/entry-models/Login");
-const SignUp = require("../models/entry-models/SignUp");
-const Events = require("../models/entry-models/Events");
-const Services = require("../models/entry-models/Services");
-const Rides = require("../models/entry-models/Rides");
+const { Login, SignUp, Events, Services, Rides } = require('../models/entry-models');
 
 module.exports = {
   getAllLoginData: async (req, res) => {
