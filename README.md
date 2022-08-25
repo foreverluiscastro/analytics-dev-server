@@ -1,6 +1,6 @@
 # TPCA Analytics Development Server
 
-This server was created for the purpose of collecting metric data from TPCA.
+This server was created for the purpose of collecting data from TPCA.
 
 It was created using:
 
