@@ -1,5 +1,5 @@
 // Import dependencies
-const { Login, SignUp, Events, Services, Rides, Discover } = require('../models/entry-models');
+const { Login, SignUp, Events, Services, Rides, Discover, Coffee } = require('../models/entry-models');
 
 module.exports = {
   getAllLoginData: async (req, res) => {
@@ -46,6 +46,14 @@ module.exports = {
     console.log("getting all rides");
     try {
       const data = await Discover.find();
+      res.status(200).send(data);
+    } catch (err) {}
+  },
+
+  getAllCoffeeData: async (req, res) => {
+    console.log("getting all rides");
+    try {
+      const data = await Coffee.find();
       res.status(200).send(data);
     } catch (err) {}
   },

@@ -61,4 +61,14 @@ module.exports = {
       res.status(201).send(response);
     } catch (error) {}
   },
+
+  trackCoffee: async (req, res) => {
+    try {
+      // console.log(req, 'This is the request obj')
+      const response = await post.createCoffeeEntry(req.body, res);
+
+      console.log(`POST made to ${req.path}`);
+      res.status(201).send(response);
+    } catch (error) {}
+  },
 };
