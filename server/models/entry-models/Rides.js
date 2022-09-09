@@ -1,7 +1,7 @@
 // Import dependencies
 const mongoose = require('mongoose');
 
-//     ****    This is a universal Model for all entries to the database    ****
+//     ****    This is a Model for the Rides entries to the database    ****
 
 const dataSchema = new mongoose.Schema({
     user_id: {

@@ -1,7 +1,7 @@
 // Import dependencies
 const mongoose = require('mongoose');
 
-//     ****    This is a Model for the SignUp entries to the database    ****
+//     ****    This is a Model for the Discovery entries to the database    ****
 
 const dataSchema = new mongoose.Schema({
     user_id: {
@@ -15,4 +15,4 @@ const dataSchema = new mongoose.Schema({
 })
 
 // Export the model
-module.exports = mongoose.model('SignUp', dataSchema)
+module.exports = mongoose.model('Discover', dataSchema)
