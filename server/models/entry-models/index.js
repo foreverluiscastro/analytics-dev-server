@@ -5,3 +5,5 @@ exports.SignUp = require('./SignUp');
 exports.Events = require('./Events');
 exports.Services = require('./Services');
 exports.Rides = require('./Rides');
+exports.Discover = require('./Discover');
+exports.Coffee = require('./Coffee')

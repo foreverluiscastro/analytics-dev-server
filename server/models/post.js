@@ -1,5 +1,6 @@
 // Import database entry models
-const { Login, SignUp, Events, Services, Rides } = require('../models/entry-models');
+const { Login, SignUp, Events, Services, Rides, Discover, Coffee } = require('../models/entry-models');
+
 
 module.exports = {
   createLoginEntry: async (req, res) => {
@@ -78,6 +79,40 @@ module.exports = {
   createRidesEntry: async (req, res) => {
     // create the data body to post using the model
     const data = new Rides({
+      user_id: req.user_id,
+      created_on: req.created_on,
+    });
+
+    // In the try block, we are saving the data using data.save()
+    try {
+      // console.log(data, 'this is the entry')
+      const dataToSave = await data.save();
+      res.status(200).send(dataToSave);
+    } catch (err) {
+      console.log(`DATABASE ERROR - POST ${err}`);
+    }
+  },
+
+  createDiscoverEntry: async (req, res) => {
+    // create the data body to post using the model
+    const data = new Discover({
+      user_id: req.user_id,
+      created_on: req.created_on,
+    });
+
+    // In the try block, we are saving the data using data.save()
+    try {
+      // console.log(data, 'this is the entry')
+      const dataToSave = await data.save();
+      res.status(200).send(dataToSave);
+    } catch (err) {
+      console.log(`DATABASE ERROR - POST ${err}`);
+    }
+  },
+
+  createCoffeeEntry: async (req, res) => {
+    // create the data body to post using the model
+    const data = new Coffee({
       user_id: req.user_id,
       created_on: req.created_on,
     });
