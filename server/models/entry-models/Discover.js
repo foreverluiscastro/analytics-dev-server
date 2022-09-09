@@ -1,7 +1,7 @@
 // Import dependencies
 const mongoose = require('mongoose');
 
-//     ****    This is a Model for the Discovery entries to the database    ****
+//     ****    This is a Model for the Discover entries to the database    ****
 
 const dataSchema = new mongoose.Schema({
     user_id: {
