@@ -12,6 +12,7 @@ router.get("/signup", controller.get.getAllSignUpData);
 router.get("/events", controller.get.getAllEventsData);
 router.get("/services", controller.get.getAllServicesData);
 router.get("/rides", controller.get.getAllRidesData);
+router.get("/discover", controller.get.getAllDiscoverData);
 
 // POST endpoints
 router.post("/login", controller.post.trackLogin);
@@ -19,6 +20,7 @@ router.post("/signup", controller.post.trackSignUp);
 router.post("/events", controller.post.trackEvents);
 router.post("/services", controller.post.trackServices);
 router.post("/rides", controller.post.trackRides);
+router.post("/discover", controller.post.trackDiscover);
 
 // Export the router
 module.exports = router;
